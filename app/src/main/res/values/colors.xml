@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="pn_aubergine_ori">#552F4C</color>
+    <color name="pn_gold_ori">#D6BA96</color>
+    <color name="pn_yellow_light_ori">#FFFCDC</color>
+    <color name="pn_blue_dark_ori">#5395AC</color>
+    <color name="pn_blue_light_ori">#74C8E6</color>
 </resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.powernapping.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.powernapping.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.powernapping.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_bottomMenuNavigationFragment"
+            app:destination="@id/bottomMenuNavigationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.powernapping.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/timerFragment"
+        android:name="com.example.powernapping.ui.TimerFragment"
+        android:label="fragment_timer"
+        tools:layout="@layout/fragment_timer" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.powernapping.ui.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.powernapping.ui.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+    <fragment
+        android:id="@+id/bottomMenuNavigationFragment"
+        android:name="com.example.powernapping.ui.BottomMenuNavigationFragment"
+        android:label="fragment_bottom_menu_navigation"
+        tools:layout="@layout/fragment_bottom_menu_navigation" >
+        <action
+            android:id="@+id/action_bottomMenuNavigationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.powernapping.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+</navigation>

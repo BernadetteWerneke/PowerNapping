@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">nombre</string>
+    <string name="email">correo electrónico</string>
+    <string name="password">contraseña</string>
+    <string name="login">login</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recreation">recreación</string>
+    <string name="relaxation">relajación</string>
+    <string name="power">poder</string>
+
+    <string name="library">Library</string>
+    <string name="home">Home</string>
+    <string name="timer">Timer</string>
+    <string name="favorite">Favorite</string>
+    <string name="dashboard">Dashboard</string>
+</resources>

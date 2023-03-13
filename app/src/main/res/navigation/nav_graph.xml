@@ -44,18 +44,19 @@
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" />
     <fragment
-        android:id="@+id/libraryFragment"
-        android:name="com.example.powernapping.ui.LibraryFragment"
-        android:label="fragment_library"
-        tools:layout="@layout/fragment_library" />
-    <fragment
         android:id="@+id/bottomMenuNavigationFragment"
-        android:name="com.example.powernapping.ui.BottomMenuNavigationFragment"
+        android:name="com.example.powernapping.ui.BottomMenuNavigationActivity"
         android:label="fragment_bottom_menu_navigation"
         tools:layout="@layout/fragment_bottom_menu_navigation" >
         <action
             android:id="@+id/action_bottomMenuNavigationFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_bottomMenuNavigationFragment_to_favoriteFragment2"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_bottomMenuNavigationFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"

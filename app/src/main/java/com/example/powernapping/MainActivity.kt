@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.view.WindowManager
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // full screen in App
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+
+       // full screen in App
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.setDecorFitsSystemWindows(false)
         } else {
             window.setFlags(

@@ -16,8 +16,6 @@ class SongAdapter (
 
         //der ViewHolder umfasst die View und stellt einen Listeneintrag dar
         inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-            //var songName: TextView = itemView.findViewById(R.id.songitem_songtitle_text)
-            //var interpreter: TextView =itemView.findViewById(R.id.songitem_interpreter_text)
             var songimage: ImageView = itemView.findViewById(R.id.songitem_overview_image)
         }
 
@@ -46,7 +44,7 @@ class SongAdapter (
             val todo = dataset[position]
             //holder.songName.text = todo.songTitle
             //holder.interpreter.text = todo.interpret
-            holder.songimage.setImageResource(todo.imageResource)
+            holder.songimage.setImageResource(todo.imageResourceSong)
         }
 
         //damit der LayoutManager weiß, wie lang die RecyclerListe ist

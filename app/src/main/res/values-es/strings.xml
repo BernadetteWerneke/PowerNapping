@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- TODO: LoginScreen -->
     <string name="name">nombre</string>
     <string name="email">correo electrónico</string>
     <string name="password">contraseña</string>
     <string name="login">login</string>
 
+    <!-- TODO: SplashSreen -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="recreation">recreación</string>
     <string name="relaxation">relajación</string>
     <string name="power">poder</string>
 
-    <string name="library">Library</string>
+    <!-- TODO: BottomMenu -->
     <string name="home">Home</string>
     <string name="timer">Timer</string>
     <string name="favorite">Favorite</string>
     <string name="dashboard">Dashboard</string>
+
+    <!-- TODO: TimerFragment -->
+    <string name="restart">restart</string>
+    <string name="play">play</string>
+    <string name="power_nap">Power Nap</string>
+    <string name="check_feel_better">check: feel better?</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -1,19 +1,32 @@
 <resources>
     <string name="app_name" translatable="false">PowerNapping</string>
 
+    <!-- TODO: LoginScreen -->
     <string name="name">name</string>
     <string name="email">email</string>
     <string name="password">password</string>
     <string name="login">login</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- TODO: SplashSreen -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="recreation">recreation</string>
     <string name="relaxation">relaxation</string>
     <string name="power">power</string>
 
-    <string name="library">Library</string>
+    <!-- TODO: BottomMenu -->
     <string name="home">Home</string>
     <string name="timer">Timer</string>
     <string name="favorite">Favorite</string>
     <string name="dashboard">Dashboard</string>
+
+    <!-- TODO: TimerFragment -->
+    <string name="restart">restart</string>
+    <string name="play">play</string>
+    <string name="power_nap">Power Nap</string>
+    <string name="check_feel_better">check: feel better?</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

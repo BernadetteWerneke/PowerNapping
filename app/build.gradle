@@ -15,6 +15,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -32,7 +33,7 @@ android {
     }
 
     buildFeatures{
-        viewBinding = true
+        viewBinding true
     }
 }
 
@@ -48,4 +49,7 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    apply plugin: 'kotlin-android-extensions'
+    //timer management
+    implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
 }

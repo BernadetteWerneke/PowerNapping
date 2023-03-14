@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pn_blue_light_ori"
+    tools:context=".ui.TimerCheckFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/checkFeeling_cardView"
+        android:layout_width="0dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/check_title_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/i_feel"
+                android:textColor="@color/pn_aubergine_ori"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/check_emoji_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <SeekBar
+                android:id="@+id/check_seekBarDiscrete"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:foregroundGravity="center_horizontal"
+                android:max="10"
+                android:min="1"
+                android:progress="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/check_showrating_text" />
+
+            <TextView
+                android:id="@+id/check_showrating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Rating 1"
+                android:textColor="@color/pn_aubergine_ori"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/check_emoji_iv"
+                app:layout_constraintStart_toStartOf="@+id/check_emoji_iv"
+                app:layout_constraintTop_toBottomOf="@+id/check_emoji_iv" />
+
+            <ImageView
+                android:id="@+id/check_emoji_iv"
+                android:layout_width="167dp"
+                android:layout_height="176dp"
+                android:layout_marginTop="160dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.457"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/sleeping_face" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/check_end_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_done"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:contentDescription="end"/>
+
+            <TextView
+                android:id="@+id/check_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/check"
+                android:textColor="@color/pn_aubergine_ori"
+                android:textSize="34dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

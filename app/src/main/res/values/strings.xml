@@ -25,8 +25,13 @@
     <string name="power_nap">Power Nap</string>
     <string name="check_feel_better">check: feel better?</string>
 
+    <!-- TODO: Dashboard -->
+    <string name="I_feel_good">I feel good.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Timer Check Feeling -->
+    <string name="check">Check</string>
+    <string name="i_feel">I feel</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

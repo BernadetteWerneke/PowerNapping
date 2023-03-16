@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.BottomMenuNavigationActivity"
+            android:name=".BottomMenuNavigationActivity"
             android:exported="true"/>
 
         <meta-data

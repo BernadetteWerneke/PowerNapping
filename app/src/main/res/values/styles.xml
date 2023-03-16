@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/material_dynamic_neutral10</item>
     </style>
 
+    <!-- Progress Bar theme. -->
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle</item>
+    </style>
+
 </resources>

@@ -1,10 +1,14 @@
-package com.example.powernapping.ui
+package com.example.powernapping
 
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.powernapping.R
+import com.example.powernapping.ui.DashboardFragment
+import com.example.powernapping.ui.FavoriteFragment
+import com.example.powernapping.ui.HomeFragment
+import com.example.powernapping.ui.TimerFragment
 import kotlinx.android.synthetic.main.fragment_bottom_menu_navigation.*
 
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/checkFragment">
+    app:startDestination="@id/timerFragment">
 
     <fragment
         android:id="@+id/testFragment"
@@ -52,7 +52,7 @@
         tools:layout="@layout/fragment_favorite" />
     <fragment
         android:id="@+id/bottomMenuNavigationFragment"
-        android:name="com.example.powernapping.ui.BottomMenuNavigationActivity"
+        android:name="com.example.powernapping.BottomMenuNavigationActivity"
         android:label="fragment_bottom_menu_navigation"
         tools:layout="@layout/fragment_bottom_menu_navigation" >
         <action

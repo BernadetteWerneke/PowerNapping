@@ -9,12 +9,17 @@ import com.example.powernapping.R
 import com.example.powernapping.data.model.Category
 
 class CategoryAdapter(
-    private val dataset: List<Category>
+    private var dataset: List<Category>
 ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val categoryName = itemView.findViewById<TextView>(R.id.category_name_text)
         val songRecycler = itemView.findViewById<RecyclerView>(R.id.category_song_recycler)
+    }
+
+    fun submitList(list: List<Category>) {
+        dataset = list
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {

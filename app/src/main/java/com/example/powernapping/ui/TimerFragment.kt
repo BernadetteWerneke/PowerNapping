@@ -46,19 +46,18 @@ class TimerFragment : Fragment() {
         //Material Time Picker
         binding.timerShowprogressText.setOnClickListener {
             openTimePicker()
+            //TODO Anzeige ausgewählte Zeit
         }
 
     //timer handling
-        binding.timerShowprogressText.text = "0"
+        binding.timerShowprogressText.text = "00:00"
 
         binding.plusButton.setOnClickListener {
             if (progr <= 90) {
                 progr += 10
                 updateProgressBar()
             }
-
         }
-
         binding.minusButton.setOnClickListener {
             if (progr >= 10) {
                 progr -= 10
@@ -87,12 +86,14 @@ class TimerFragment : Fragment() {
         picker.show(childFragmentManager, "TAG")
 
         //what is triggert?
+        //ok button
         picker.addOnPositiveButtonClickListener {
             Log.d("TimerFragment", "POSITIVE")
             val h = picker.hour
             val min = picker.minute
             Log.d("TimerFragment", "$h:$min")
         }
+        //cancel button
         picker.addOnNegativeButtonClickListener {
             Log.d("TimerFragment", "NEGATIVE")
         }

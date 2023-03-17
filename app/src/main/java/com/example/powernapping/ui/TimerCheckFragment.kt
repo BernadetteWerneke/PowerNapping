@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.powernapping.R
 import com.example.powernapping.databinding.FragmentTimerCheckBinding
 import kotlinx.android.synthetic.main.fragment_timer_check.*
@@ -27,6 +28,12 @@ class TimerCheckFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentTimerCheckBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        //fab ok return back to TimerFragment
+        binding.checkEndFab.setOnClickListener{
+            // TODO save emoji rating
+            Navigation.findNavController(view).navigate((R.id.action_checkFragment_to_timerFragment))
+        }
 
         //set preview emoji
         binding.checkEmojiIv.setImageResource(R.drawable.sleeping_face)

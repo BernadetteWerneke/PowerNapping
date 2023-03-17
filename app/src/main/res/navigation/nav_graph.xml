@@ -41,9 +41,6 @@
         <action
             android:id="@+id/action_timerFragment_to_checkFragment"
             app:destination="@id/checkFragment" />
-        <action
-            android:id="@+id/action_timerFragment_to_timePickerFragment"
-            app:destination="@id/timePickerFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -77,10 +74,9 @@
         android:id="@+id/checkFragment"
         android:name="com.example.powernapping.ui.TimerCheckFragment"
         android:label="fragment_check"
-        tools:layout="@layout/fragment_timer_check" />
-    <fragment
-        android:id="@+id/timePickerFragment"
-        android:name="com.example.powernapping.ui.TimePickerFragment"
-        android:label="fragment_time_picker"
-        tools:layout="@layout/fragment_time_picker" />
+        tools:layout="@layout/fragment_timer_check" >
+        <action
+            android:id="@+id/action_checkFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+    </fragment>
 </navigation>

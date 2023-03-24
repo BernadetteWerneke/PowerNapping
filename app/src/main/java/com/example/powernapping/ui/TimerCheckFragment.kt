@@ -1,14 +1,16 @@
 package com.example.powernapping.ui
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.example.powernapping.R
+import com.example.powernapping.ViewModel.TimerViewModel
 import com.example.powernapping.databinding.FragmentTimerCheckBinding
 import kotlinx.android.synthetic.main.fragment_timer_check.*
 
@@ -18,20 +20,26 @@ class TimerCheckFragment : Fragment() {
     private var _binding : FragmentTimerCheckBinding? = null
     private val binding get() = _binding!!
 
+    private val viewModel : TimerViewModel by activityViewModels()
+
     var startPoint = 0
     var endPoint = 0
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         _binding = FragmentTimerCheckBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        //fab ok return back to TimerFragment
+        //navigation back to TimerFragment
         binding.checkEndFab.setOnClickListener{
-            // TODO save emoji rating
+            // TODO save emoji rating (check_showrating_text)
             Navigation.findNavController(view).navigate((R.id.action_checkFragment_to_timerFragment))
         }
 
@@ -72,14 +80,12 @@ class TimerCheckFragment : Fragment() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
                 if (seekBar != null) {
                     startPoint = seekBar.progress
-                    //emoji
                 }
             }
 
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
                 if (seekBar != null) {
                     endPoint = seekBar.progress
-                    //emoji
                 }
             }
         })

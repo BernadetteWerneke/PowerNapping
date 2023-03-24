@@ -1,4 +1,4 @@
-package com.example.powernapping
+package com.example.powernapping.ViewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

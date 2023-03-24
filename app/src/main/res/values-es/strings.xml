@@ -32,6 +32,11 @@
     <string name="check">Check</string>
     <string name="i_feel">Me siento</string>
 
+    <!-- TODO: Pick Up Timer -->
+    <string name="select_nap_time">Elige power nap time</string>
+    <string name="maax_time">(máximo 60 mimutos)</string>
+    <string name="min">min</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <!-- TODO: Remove or change this placeholder text -->
     <!-- TODO: Remove or change this placeholder text -->

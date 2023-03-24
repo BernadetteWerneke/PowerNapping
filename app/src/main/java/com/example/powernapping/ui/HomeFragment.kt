@@ -5,16 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
-import com.example.powernapping.HomeViewModel
-import com.example.powernapping.R
+import com.example.powernapping.ViewModel.HomeViewModel
 import com.example.powernapping.adapter.CategoryAdapter
 import com.example.powernapping.data.Datasource
-import com.example.powernapping.databinding.ActivityMainBinding
 import com.example.powernapping.databinding.FragmentHomeBinding
-import kotlinx.android.synthetic.main.fragment_bottom_menu_navigation.*
 
 class HomeFragment : Fragment() {
 

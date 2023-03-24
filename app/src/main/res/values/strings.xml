@@ -32,6 +32,11 @@
     <string name="check">Check</string>
     <string name="i_feel">I feel</string>
 
+    <!-- TODO: Pick Up Timer -->
+    <string name="select_nap_time">Selset power nap time</string>
+    <string name="maax_time">(max 60 minuites)</string>
+    <string name="min">min</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -10,6 +10,7 @@ import com.example.powernapping.data.model.Category
 
 class CategoryAdapter(
     private var dataset: List<Category>
+
 ) : RecyclerView.Adapter<CategoryAdapter.ItemViewHolder>() {
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

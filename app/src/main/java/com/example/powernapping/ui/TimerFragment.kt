@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.powernapping.R
 import com.example.powernapping.ViewModel.TimerViewModel
@@ -21,9 +20,10 @@ class TimerFragment : Fragment() {
     private val viewModel: TimerViewModel by activityViewModels()
 
     //timer settings
-    private val napTimerDuration: Long = 60 // napTimeTotal        //nap duration selected
+    private var napTimerDuration: Long = 60 // napTimeTotal        //nap duration selected
     private var napTimer: CountDownTimer? = null
-    private var napProgress = 0
+    private var napProgressBar = 0
+    private var mTimerRunning: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,9 +51,6 @@ class TimerFragment : Fragment() {
         binding.timerShowprogressText.setOnClickListener {
             findNavController().navigate(R.id.action_timerFragment_to_timePickerFragment)
         }
-        binding.timerMinText.setOnClickListener {
-            findNavController().navigate(R.id.action_timerFragment_to_timePickerFragment)
-        }
 
         //navigation to check fragment
         binding.timerCheckButton.setOnClickListener {
@@ -67,20 +64,20 @@ class TimerFragment : Fragment() {
     }
 
     //------------------------------------------------------
-    //ProgressBar update
-    private fun setProgressBar() {
-        binding.napProgressBar.progress = napProgress
+    fun setProgressBar() {
+        binding.napProgressBar.progress = napProgressBar
         //time count down for 60 seconds (napTimerDuration * 60000)
-        //with 1 second as countDown interval
         napTimer = object : CountDownTimer(napTimerDuration * 1000, 1000) {
             override fun onTick(p0: Long) {
-                //update progress
-                napProgress++
-                binding.napProgressBar.progress = 100 - napProgress
-                //Show remaining time (60 sec)
-                //binding.timerShowprogressText.text = (60 - napProgress).toString()
-                updateTextUI()
+                //formatCountDownText(napTimerDuration)
 
+                napProgressBar++
+                binding.napProgressBar.progress = 100 - napProgressBar
+
+                val minutes = ((napTimerDuration / 1000) / 60).toString()
+                val seconds = ((napTimerDuration / 1000) % 60).toString()
+                //binding.timerShowprogressText.text = (60 - napProgressBar).toString() //60sec
+                binding.timerShowprogressText.text = "$minutes:$seconds"
             }
 
             override fun onFinish() {
@@ -88,21 +85,24 @@ class TimerFragment : Fragment() {
                 // TODO  Alarm start ( and press finish)
             }
         }.start()
-
-        //Aktualisierung
-        viewModel.napTimeTotal.observe(viewLifecycleOwner, Observer {
-            binding.timerShowprogressText.text = it.toString()
-        })
+        //timer is on
+        mTimerRunning = true
+        binding.timerRestartFab.setOnClickListener(){
+            restartTimer()
+        }
     }
 
-        fun updateTextUI() {
-            val minute = (napTimerDuration / 1000) / 60
-            val seconds = (napTimerDuration / 1000) % 60
-            binding.timerShowprogressText.text = "$minute:$seconds"
-        }
 
-        override fun onDestroyView() {
-            super.onDestroyView()
-            _binding = null
-        }
+    fun restartTimer(){}
+
+    fun formatCountDownText(milliseconds: Long):String{
+        val minutes = milliseconds / 1000 / 60
+        val seconds = milliseconds / 1000 % 60
+        return "$minutes:$seconds"
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

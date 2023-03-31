@@ -8,14 +8,11 @@ class TimerViewModel: ViewModel() {
 
     //selected nap time duration
     private var _napTimeTotal = MutableLiveData<Int>(0)
-    val napTimeTotal : LiveData<Int>
-    get() = _napTimeTotal
+    val napTimeTotal: LiveData<Int>
+        get() = _napTimeTotal
 
-
-    fun set123(duration:Int){
+    fun set123(duration: Int) {
         _napTimeTotal.value = duration
     }
-
-
 
 }

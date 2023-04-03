@@ -5,108 +5,238 @@
     "error_message":"",
     "warnings":"",
     "results_count":10,
-    "next":"https:\/\/api.jamendo.com\/v3.0\/playlists?client_id=43119550&format=jsonpretty&offset=10"
+    "next":"https:\/\/api.jamendo.com\/v3.0\/albums\/tracks?client_id=43119550&format=jsonpretty&limit=10&order=popularity_total&offset=10"
   },
   "results":[
     {
-      "id":"1000",
-      "name":"Franz\u00f6sisches",
-      "creationdate":"2006-10-17",
-      "user_id":"42609",
-      "user_name":"Alberta",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p1000\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p1000",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p1000"
+      "id":"480080",
+      "name":"Better",
+      "releasedate":"2022-04-15",
+      "artist_id":"495572",
+      "artist_name":"Square a Saw",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=480080&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a480080\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1938879",
+          "position":"1",
+          "name":"Better",
+          "duration":"159",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1938879&format=mp31&from=l9hTXT6AuSLALCa8P9NnAw%3D%3D%7CKa1IEMutawtYphQFeXU5fQ%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1938879\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"10000",
-      "name":"m\u00e9lancolique",
-      "creationdate":"2007-03-02",
-      "user_id":"87414",
-      "user_name":"Xenotime",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p10000\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p10000",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p10000"
+      "id":"481347",
+      "name":"Unbreakable",
+      "releasedate":"2022-04-28",
+      "artist_id":"428294",
+      "artist_name":"Pokki DJ",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=481347&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a481347\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1942488",
+          "position":"1",
+          "name":"Unbreakable",
+          "duration":"227",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1942488&format=mp31&from=x4Ykpc68uqiVaJVibCUkCA%3D%3D%7CV5TLYpUUm0TfsYFIVBtxRw%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1942488\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100000",
-      "name":"Fresh and happy",
-      "creationdate":"2009-01-17",
-      "user_id":"553995",
-      "user_name":"Lillysternchen",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100000\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100000",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100000"
+      "id":"482845",
+      "name":"Nothing,With You",
+      "releasedate":"2022-05-13",
+      "artist_id":"535912",
+      "artist_name":"Smoking With Poets",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=482845&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a482845\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1945368",
+          "position":"1",
+          "name":"Nothing,With You",
+          "duration":"213",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1945368&format=mp31&from=w9tuPdt74tUmeJ663sXwWw%3D%3D%7CM0me0aHkSUaQ%2FWFcvQVG5Q%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1945368\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100001",
-      "name":"Folk Vasco",
-      "creationdate":"2009-01-17",
-      "user_id":"402668",
-      "user_name":"palaciodeinvierno",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100001\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100001",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100001"
+      "id":"489247",
+      "name":"Star in the Sky",
+      "releasedate":"2022-07-22",
+      "artist_id":"495572",
+      "artist_name":"Square a Saw",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=489247&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a489247\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1960209",
+          "position":"1",
+          "name":"Star in the Sky",
+          "duration":"146",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1960209&format=mp31&from=BYbHv26yspBsy3Cue07zXA%3D%3D%7CoOSW8U6sdmdtoTiT0mywPg%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1960209\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100002",
-      "name":"oculus",
-      "creationdate":"2009-01-17",
-      "user_id":"551380",
-      "user_name":"rac290661",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100002\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100002",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100002"
+      "id":"499722",
+      "name":"Lady (feat Kid Randie &amp; Myster Sandman)",
+      "releasedate":"2022-10-17",
+      "artist_id":"537251",
+      "artist_name":"Le_J_James",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=499722&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a499722\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1980009",
+          "position":"1",
+          "name":"Lady (feat Kid Randie &amp; Myster Sandman)",
+          "duration":"200",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1980009&format=mp31&from=YVYVrFIWmauldW8LFd94IQ%3D%3D%7CeOEiapHsJdH%2FVCatVZNXqA%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1980009\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100003",
-      "name":"southside",
-      "creationdate":"2009-01-17",
-      "user_id":"554017",
-      "user_name":"southside",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100003\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100003",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100003"
+      "id":"481780",
+      "name":"Nick Ray - Divide &amp; Conquer (Electronic Remix)",
+      "releasedate":"2022-05-03",
+      "artist_id":"523299",
+      "artist_name":"Nick Ray",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=481780&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a481780\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1943451",
+          "position":"1",
+          "name":"Nick Ray - Divide and Conquer (Electronic Remix)",
+          "duration":"213",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1943451&format=mp31&from=aWBil2kmITaKsOAYA%2Bnx3w%3D%3D%7CTxFGguNRQ3m7sed4LF1bqA%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1943451\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100004",
-      "name":"Instrumental",
-      "creationdate":"2009-01-17",
-      "user_id":"502368",
-      "user_name":"RamRom",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100004\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100004",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100004"
+      "id":"482189",
+      "name":"Modern Soul Pop Female Vocal (feat. Tee Amara)",
+      "releasedate":"2022-05-05",
+      "artist_id":"527721",
+      "artist_name":"Joel Loopez",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=482189&width=300",
+      "zip":"",
+      "zip_allowed":false,
+      "tracks":[
+        {
+          "id":"1944125",
+          "position":"1",
+          "name":"Gone (feat. Tee Amara)",
+          "duration":"179",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"",
+          "audiodownload":"",
+          "audiodownload_allowed":false
+        }
+      ]
     },
     {
-      "id":"100005",
-      "name":"buccolique",
-      "creationdate":"2009-01-17",
-      "user_id":"518756",
-      "user_name":"ez3bre",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100005\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100005",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100005"
+      "id":"488846",
+      "name":"Boogie feat. Tracie Frank",
+      "releasedate":"2022-07-18",
+      "artist_id":"548980",
+      "artist_name":"The Disco Viking",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=488846&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a488846\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1958457",
+          "position":"1",
+          "name":"Boogie feat. Tracie Frank",
+          "duration":"251",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1958457&format=mp31&from=HpU9f6w%2BQtf37RbDXiOUyg%3D%3D%7CkziKt3ElPvL4aQRnUbXy2Q%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1958457\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100006",
-      "name":"moja lista",
-      "creationdate":"2009-01-17",
-      "user_id":"535696",
-      "user_name":"erazor",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100006\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100006",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100006"
+      "id":"484808",
+      "name":"SUGA SUGA",
+      "releasedate":"2022-06-01",
+      "artist_id":"510867",
+      "artist_name":"Egor Budennyy",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=484808&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a484808\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1949304",
+          "position":"1",
+          "name":"SUGA SUGA",
+          "duration":"175",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1949304&format=mp31&from=%2FEbYb5ZzAnGZ0ybQvDu%2F%2Bw%3D%3D%7CpXQ10EvHGd8vK0hg9Q9yFA%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1949304\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     },
     {
-      "id":"100007",
-      "name":"Riddimperialist",
-      "creationdate":"2009-01-17",
-      "user_id":"466375",
-      "user_name":"Eifmelaim",
-      "zip":"https:\/\/storage.jamendo.com\/download\/p100007\/mp32\/",
-      "shorturl":"https:\/\/jamen.do\/l\/p100007",
-      "shareurl":"https:\/\/www.jamendo.com\/list\/p100007"
+      "id":"487547",
+      "name":"Guilty",
+      "releasedate":"2022-07-01",
+      "artist_id":"489770",
+      "artist_name":"I. D. F. X.",
+      "image":"https:\/\/usercontent.jamendo.com?type=album&id=487547&width=300",
+      "zip":"https:\/\/storage.jamendo.com\/download\/a487547\/mp32\/",
+      "zip_allowed":true,
+      "tracks":[
+        {
+          "id":"1955722",
+          "position":"1",
+          "name":"Guilty",
+          "duration":"152",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1955722&format=mp31&from=m5YkLyB56dqYJRzuoHRp9w%3D%3D%7CVQl%2BuKCly6Tl6B4M%2BsGunA%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1955722\/mp32\/",
+          "audiodownload_allowed":true
+        },
+        {
+          "id":"1955723",
+          "position":"2",
+          "name":"One Day",
+          "duration":"154",
+          "license_ccurl":"http:\/\/creativecommons.org\/licenses\/by-nc-nd\/3.0\/",
+          "audio":"https:\/\/prod-1.storage.jamendo.com\/?trackid=1955723&format=mp31&from=X1HQzBWJgUr13XxrBXFwsg%3D%3D%7C0JBWMCHDNj%2FSM92LSYoh0A%3D%3D",
+          "audiodownload":"https:\/\/prod-1.storage.jamendo.com\/download\/track\/1955723\/mp32\/",
+          "audiodownload_allowed":true
+        }
+      ]
     }
   ]
 }

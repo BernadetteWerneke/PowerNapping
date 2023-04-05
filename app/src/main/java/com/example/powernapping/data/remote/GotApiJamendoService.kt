@@ -1,6 +1,5 @@
 package com.example.powernapping.data.remote
 
-import com.example.powernapping.data.model.AlbumData
 import com.example.powernapping.data.model.GotSong
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -21,7 +20,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface GotApiJamendoService {
-    @GET("?client_id=43119550&format=json&limit=20&order=popularity_total")
+    @GET("?client_id=43119550&format=json&limit=50&order=popularity_total")
     suspend fun getAlbum(): GotSong
 }
 

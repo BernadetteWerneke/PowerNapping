@@ -14,7 +14,7 @@ class Datasource {
                     Song("Take on ME", "a-ha",
                         R.drawable.cat_images_31,R.drawable.baseline_favorite_24),
                     Song("Africa", "TOTO",
-                        R.drawable.cat_images_22,R.drawable.baseline_favorite_24),
+                        R.drawable.cat_images_28,R.drawable.baseline_favorite_24),
                     Song("Out Of The Dark", "Falco",
                         R.drawable.cat_images_24,R.drawable.baseline_favorite_24),
                     Song("Never Gonna Give You Up", "Rick Astley",

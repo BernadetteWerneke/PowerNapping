@@ -3,6 +3,10 @@ package com.example.powernapping.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.CircleCropTransformation
+import coil.transform.RoundedCornersTransformation
+import com.example.powernapping.R
 import com.example.powernapping.data.model.AlbumData
 import com.example.powernapping.databinding.SongItemLongBinding
 
@@ -10,12 +14,6 @@ class FavoritenAdapter(): RecyclerView.Adapter<FavoritenAdapter.UserHolder>(){
 
     private var dataset = listOf<AlbumData>()
         class UserHolder(val binding: SongItemLongBinding): RecyclerView.ViewHolder(binding.root){
-            fun bind(albumData: AlbumData){
-                //binding.songItemLongImage.setImageResource(song.imageResourceSong)
-                binding.songItemLongSongnameText.text = albumData.name
-                binding.songItemLongInterpreterText.text = albumData.artist_name
-                //binding.songItemLongImageStar.setImageResource(song.imageResourceStar)
-            }
         }
 
         fun submitList(newList : List<AlbumData>){
@@ -29,13 +27,19 @@ class FavoritenAdapter(): RecyclerView.Adapter<FavoritenAdapter.UserHolder>(){
     }
 
     override fun onBindViewHolder(holder: UserHolder, position: Int) {
-        //holder.bind(song.get(position))
-        //holder.binding.root.setOnClickListener{
-        //    onClick(song.get(position))
         val album = dataset[position]
 
         holder.binding.songItemLongSongnameText.text = album.name
         holder.binding.songItemLongInterpreterText.text = album.artist_name
+
+        //load cover image
+        holder.binding.songItemTv.load(album.image) {
+            //transformations(CircleCropTransformation())         //circle form
+            transformations(RoundedCornersTransformation(30f))
+            error(R.drawable.ic_broken_image)                     // if image could not be loaded
+            placeholder(R.drawable.woozy_face)         // placeholder face during loading images
+            crossfade(enable = true)                              // so that images don't jump
+        }
         }
 
     override fun getItemCount(): Int {

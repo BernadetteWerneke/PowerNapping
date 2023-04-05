@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/song_item_long_cardview"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -20,46 +20,27 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/song_item_long_card_image"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/song_item_long_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/category2" />
-            </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/song_item_long_songname_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/inter_medium"
                 android:textColor="@color/pn_aubergine_ori"
-                app:layout_constraintEnd_toStartOf="@+id/song_item_long_card_star"
-                app:layout_constraintStart_toEndOf="@+id/song_item_long_card_image"
-                app:layout_constraintTop_toTopOf="@+id/song_item_long_card_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/song_item_tv"
+                app:layout_constraintTop_toTopOf="@+id/song_item_tv"
                 tools:text="song name" />
 
             <TextView
                 android:id="@+id/song_item_long_interpreter_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:fontFamily="@font/inter_medium"
                 android:textColor="@color/pn_aubergine_ori"
                 app:layout_constraintEnd_toEndOf="@+id/song_item_long_songname_text"
@@ -67,22 +48,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/song_item_long_songname_text"
                 tools:text="interpreter" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/song_item_long_card_star"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:backgroundTint="@color/pn_blue_light_ori"
-                app:layout_constraintBottom_toBottomOf="@+id/song_item_long_card_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/song_item_long_card_image">
+            <ImageView
+                android:id="@+id/song_item_tv"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
 
-                <ImageView
-                    android:id="@+id/song_item_long_image_star"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/baseline_favorite_24" />
-            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

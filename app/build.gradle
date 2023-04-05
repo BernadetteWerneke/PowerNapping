@@ -64,8 +64,4 @@ dependencies {
     // Coil
     implementation "io.coil-kt:coil:2.2.2"
 
-    //Jamendo API implementation 'com.jamendo.api:jamendo-android:1.0.1'
-
-
-
 }

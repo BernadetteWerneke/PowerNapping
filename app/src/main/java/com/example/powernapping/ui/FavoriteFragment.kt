@@ -1,12 +1,14 @@
 package com.example.powernapping.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.powernapping.R
+import com.example.powernapping.ViewModel.ApiStatus
 import com.example.powernapping.ViewModel.FavoriteViewModel
 import com.example.powernapping.adapter.FavoritenAdapter
 import com.example.powernapping.databinding.FragmentFavoriteBinding
@@ -32,8 +34,32 @@ class FavoriteFragment : Fragment() {
         val gotAdapter = FavoritenAdapter()
         binding.FavoritenRecyclerView.adapter = gotAdapter
 
+        //observe alben
         viewModel.alben.observe(viewLifecycleOwner){
-            gotAdapter.submitList(it)
+            gotAdapter.submitList(it)       //data are loaded into recycler
+        }
+
+        //observe internet connection with error handling
+        viewModel.loading.observe(viewLifecycleOwner){
+            when (it) {
+                //show progress bar while loading
+                ApiStatus.LOADING -> {
+                    Log.e("Achtung", "Achtung1")
+                    binding.favoriteLoadingError.visibility = View.GONE
+                    binding.favoriteProgressBar.visibility = View.VISIBLE
+                }
+                ApiStatus.DONE -> {
+                    Log.e("Achtung", "Achtung2")
+                    binding.favoriteLoadingError.visibility = View.GONE
+                    binding.favoriteProgressBar.visibility = View.GONE
+                }
+                //show cloud image while no internet connection    //TODO diesen Part verschieben in FavoriteViewModel
+                ApiStatus.ERROR -> {
+                    Log.e("Achtung", "Achtung3")
+                    binding.favoriteLoadingError.visibility = View.VISIBLE
+                    binding.favoriteProgressBar.visibility = View.GONE
+                }
+            }
         }
     }
 
@@ -41,5 +67,4 @@ class FavoriteFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -44,21 +44,26 @@
         style="@style/CircularDeterminateProgressBar"
         android:layout_width="350dp"
         android:layout_height="350dp"
+        android:indeterminate="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278"
-        android:indeterminate="false"/>
+        app:layout_constraintVertical_bias="0.278" />
 
     <!-- button for navigation to check: i feel (emoji slider) -->
+
+    <!-- restart button for timer -->
+
+    <!-- start button for timer -->
+
     <Button
         android:id="@+id/timer_check_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/pn_gold_ori"
         android:fontFamily="@font/inter_medium"
@@ -67,11 +72,10 @@
         app:cornerRadius="10dp"
         app:iconTint="@color/pn_gold_ori"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timer_restart_fab" />
 
-    <!-- restart button for timer -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/timer_restart_fab"
         android:layout_width="wrap_content"
@@ -85,25 +89,23 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.823"
+        app:layout_constraintVertical_bias="0.705"
         app:tint="#5395AC" />
 
-    <!-- start button for timer -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/timer_play_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:contentDescription="@string/play"
         android:backgroundTint="#5395AC"
         android:clickable="true"
+        android:contentDescription="@string/play"
         android:src="@drawable/baseline_play_arrow_orig"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/timer_restart_fab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/timer_restart_fab"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836"
+        app:layout_constraintTop_toTopOf="@+id/timer_restart_fab"
         app:tint="#D6BA96" />
 
     <!-- writes the word min behind the running time -->

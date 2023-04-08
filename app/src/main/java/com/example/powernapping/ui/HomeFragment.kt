@@ -14,7 +14,10 @@ import com.example.powernapping.ViewModel.MainViewModel
 import com.example.powernapping.adapter.CategoryAdapter
 import com.example.powernapping.data.Datasource
 import com.example.powernapping.databinding.FragmentHomeBinding
-
+/**
+ * HomeFragment ist der MainScreen der App
+ * sollte kein User eingeloggt sein, wird man automatisch zum Login weitergeleitet
+ */
 
 class HomeFragment : Fragment() {
 
@@ -43,7 +46,17 @@ class HomeFragment : Fragment() {
         binding.categoryRecycler.adapter = CategoryAdapter(categoryList)
        //----------------------------------end recyclerview
 
-        //authentication-----------------------------------
+        //authentication firebase-----------------------------------
+        viewModel.currentUser.observe(viewLifecycleOwner){
+            if(it == null){
+                findNavController().navigate(R.id.loginFragment)
+            }
+        }
+
+        binding.homeLogoutImage.setOnClickListener{
+            viewModel.logout()                        //User=0, d.h. automatisch zum Login navigiert
+        }
+
     }
 
     override fun onDestroyView() {

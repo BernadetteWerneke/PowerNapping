@@ -35,6 +35,35 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //falls User registriert, dann gleich zum Home
+        viewModel.currentUser.observe(viewLifecycleOwner){
+            if (it != null){
+                findNavController().navigate(R.id.homeFragment)
+            }
+        }
+
+        //Fehlermeldungen ausgeben
+        viewModel.toast.observe(viewLifecycleOwner){
+            if (it != null){
+                Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        //Registrierbutton gedrückt
+        binding.signupSignupButton.setOnClickListener{
+            val mail = binding.signupEmailAddressText.text.toString()
+            val password = binding.signupPasswordText.text.toString()
+
+            if (!mail.isNullOrEmpty() && !password.isNullOrEmpty()){
+                viewModel.signUp(mail, password)
+            }
+        }
+
+        //cancel button gedrückt, dann zurück zum login
+        binding.signupCancelButton.setOnClickListener{
+            findNavController().navigateUp()
+        }
+
 
     }
 }

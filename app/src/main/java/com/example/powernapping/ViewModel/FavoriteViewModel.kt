@@ -9,9 +9,7 @@ import com.example.powernapping.data.JamendoRepository
 import com.example.powernapping.data.remote.GotJamendoApi
 import kotlinx.coroutines.launch
 
-const val TAG = "FavoriteViewModel"
 enum class ApiStatus { LOADING, ERROR, DONE }
-
 class FavoriteViewModel : ViewModel() {
     private val repository = JamendoRepository(GotJamendoApi)
 

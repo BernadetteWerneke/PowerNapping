@@ -20,7 +20,8 @@ class TimerFragment : Fragment() {
     private val viewModel: TimerViewModel by activityViewModels()
 
     //timer settings
-    private var napTimerDuration: Long = 60 // napTimeTotal        //nap duration selected
+    //private var napTimerDuration: Long = viewModel.napTimeTotal.value!! // =>napTimeTotal//nap duration selected
+    //private var napTimerDuration: Long = 0L
     private var napTimer: CountDownTimer? = null
     private var napProgressBar = 0
     private var mTimerRunning: Boolean = false
@@ -36,6 +37,7 @@ class TimerFragment : Fragment() {
         _binding = FragmentTimerBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        //show and set timer with time and progress bar
         setUpView()
 
         return view
@@ -45,7 +47,8 @@ class TimerFragment : Fragment() {
     private fun setUpView() {
 
         //set selected duration of napping
-        binding.timerShowprogressText.text = viewModel.napTimeTotal.value.toString()
+        var actualCountDownTime = viewModel.formatCountDownText(viewModel.napTimeTotal.value!!)
+        binding.timerShowprogressText.text = actualCountDownTime
 
         //navigation to scrolling Time Picker
         binding.timerShowprogressText.setOnClickListener {
@@ -66,18 +69,19 @@ class TimerFragment : Fragment() {
     //------------------------------------------------------
     fun setProgressBar() {
         binding.napProgressBar.progress = napProgressBar
-        //time count down for 60 seconds (napTimerDuration * 60000)
-        napTimer = object : CountDownTimer(napTimerDuration * 1000, 1000) {
+        //napTimer = object : CountDownTimer(napTimerDuration * 1000, 1000) {
+        napTimer = object : CountDownTimer(viewModel.napTimeTotal.value!!, 1000) {
             override fun onTick(p0: Long) {
-                //formatCountDownText(napTimerDuration)
+                var actualCountDownTime = viewModel.formatCountDownText(viewModel.napTimeTotal.value!!)
+                binding.timerShowprogressText.text = actualCountDownTime
 
                 napProgressBar++
                 binding.napProgressBar.progress = 100 - napProgressBar
 
-                val minutes = ((napTimerDuration / 1000) / 60).toString()
-                val seconds = ((napTimerDuration / 1000) % 60).toString()
+                //val minutes = ((napTimerDuration / 1000) / 60).toString()
+                //val seconds = ((napTimerDuration / 1000) % 60).toString()
                 //binding.timerShowprogressText.text = (60 - napProgressBar).toString() //60sec
-                binding.timerShowprogressText.text = "$minutes:$seconds"
+                //binding.timerShowprogressText.text = "$minutes:$seconds"
             }
 
             override fun onFinish() {
@@ -95,11 +99,6 @@ class TimerFragment : Fragment() {
 
     fun restartTimer(){}
 
-    fun formatCountDownText(milliseconds: Long):String{
-        val minutes = milliseconds / 1000 / 60
-        val seconds = milliseconds / 1000 % 60
-        return "$minutes:$seconds"
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

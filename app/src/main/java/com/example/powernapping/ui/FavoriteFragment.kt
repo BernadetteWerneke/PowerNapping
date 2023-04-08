@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.powernapping.R
 import com.example.powernapping.ViewModel.ApiStatus
 import com.example.powernapping.ViewModel.FavoriteViewModel
 import com.example.powernapping.adapter.FavoritenAdapter

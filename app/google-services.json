@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "50446272480",
+    "project_id": "powernapping-cc286",
+    "storage_bucket": "powernapping-cc286.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:50446272480:android:f329f7d3e207919a3e4d85",
+        "android_client_info": {
+          "package_name": "com.example.powernapping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "50446272480-hn0r73suo1110msona404sa02qrevqfh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.powernapping",
+            "certificate_hash": "4897990d34b16d6f413f92d617d78692119e450c"
+          }
+        },
+        {
+          "client_id": "50446272480-aqrm0lviqauh644uocdl8acj6ecs3gkn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBQPkYH6R1PXdP_CM0xgsfbEvjVxFTKPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "50446272480-aqrm0lviqauh644uocdl8acj6ecs3gkn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

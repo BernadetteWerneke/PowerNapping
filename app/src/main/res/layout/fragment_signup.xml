@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/pn_blue_light_ori"
-    tools:context=".ui.authentication.LoginFragment" >
+    tools:context=".ui.authentication.SignUpFragment">
 
     <Button
-        android:id="@+id/login_signup_button"
+        android:id="@+id/signup_cancel_button"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/pn_gold_ori"
-        android:text="sign up"
+        android:text="cancel"
         android:textColor="@color/pn_aubergine_ori"
         android:textSize="20sp"
         app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/login_signin_button"
-        app:layout_constraintStart_toStartOf="@+id/login_signin_button"
-        app:layout_constraintTop_toBottomOf="@+id/login_signin_button" />
+        app:layout_constraintEnd_toEndOf="@+id/signin_signup_button"
+        app:layout_constraintStart_toStartOf="@+id/signin_signup_button"
+        app:layout_constraintTop_toBottomOf="@+id/signin_signup_button" />
 
     <ImageView
-        android:id="@+id/login_logo_imageview"
+        android:id="@+id/signup_logo_imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/login_EmailAddress_text"
+        android:id="@+id/signup_EmailAddress_text"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="90dp"
@@ -41,12 +41,12 @@
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/login_logo_imageview"
-        app:layout_constraintStart_toStartOf="@+id/login_logo_imageview"
-        app:layout_constraintTop_toBottomOf="@+id/login_logo_imageview" />
+        app:layout_constraintEnd_toEndOf="@+id/signup_logo_imageview"
+        app:layout_constraintStart_toStartOf="@+id/signup_logo_imageview"
+        app:layout_constraintTop_toBottomOf="@+id/signup_logo_imageview" />
 
     <EditText
-        android:id="@+id/login_password_text"
+        android:id="@+id/signup_password_text"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -55,22 +55,22 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/login_EmailAddress_text"
-        app:layout_constraintStart_toStartOf="@+id/login_EmailAddress_text"
-        app:layout_constraintTop_toBottomOf="@+id/login_EmailAddress_text" />
+        app:layout_constraintEnd_toEndOf="@+id/signup_EmailAddress_text"
+        app:layout_constraintStart_toStartOf="@+id/signup_EmailAddress_text"
+        app:layout_constraintTop_toBottomOf="@+id/signup_EmailAddress_text" />
 
     <Button
-        android:id="@+id/login_signin_button"
+        android:id="@+id/signin_signup_button"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="@color/pn_gold_ori"
-        android:text="sign in"
+        android:text="sign up"
         android:textColor="@color/pn_aubergine_ori"
         android:textSize="20sp"
         app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/login_password_text"
-        app:layout_constraintStart_toStartOf="@+id/login_password_text"
-        app:layout_constraintTop_toBottomOf="@+id/login_password_text" />
+        app:layout_constraintEnd_toEndOf="@+id/signup_password_text"
+        app:layout_constraintStart_toStartOf="@+id/signup_password_text"
+        app:layout_constraintTop_toBottomOf="@+id/signup_password_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,14 +40,13 @@ class TimePickerFragment : Fragment() {
 
         //time picker with spinner mode
         binding.numPicker.setOnValueChangedListener{
-            numPicker, oldValue, newValue -> duration = newValue
+            numPicker, oldValue, newValue -> duration = newValue    //duration is selected time
         }
 
         //select time and then navigation back to TimerFragment
         binding.timepickerEndFab.setOnClickListener {
-            //save selected time
-            viewModel.set123(duration)
-            //println(duration)       // check: output in RUN should be selected time -> I/System.out: 15
+            viewModel.set123(duration*60000)        // save selected time (type INT -> milliseconds)
+            //println(duration)                     // check: output in RUN should be selected time -> I/System.out: 15
             findNavController().navigate(R.id.action_timePickerFragment_to_timerFragment)
         }
 

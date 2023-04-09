@@ -12,4 +12,5 @@
     <color name="pn_yellow_light_ori">#FFFCDC</color>
     <color name="pn_blue_dark_ori">#5395AC</color>
     <color name="pn_blue_light_ori">#87B0BE</color>
+    <color name="pn_blue_wave">#87B0BE</color>
 </resources>

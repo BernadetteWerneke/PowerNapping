@@ -4,8 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.powernapping.data.model.Category
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 
 class HomeViewModel: ViewModel() {
@@ -16,6 +14,7 @@ class HomeViewModel: ViewModel() {
         get() = _categoryList
 
     //TODO Functionalities fun xy kategoriern holen, genre auswählen und einlesen, genre laden, musik abspielen
+
 
 
 }

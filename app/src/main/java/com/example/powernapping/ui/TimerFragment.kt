@@ -1,19 +1,23 @@
 package com.example.powernapping.ui
 
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.powernapping.R
 import com.example.powernapping.ViewModel.TimerViewModel
 import com.example.powernapping.databinding.FragmentTimerBinding
 
+private const val TIME_FORMAT = "%02d:%02d"
 class TimerFragment : Fragment() {
 
+    private lateinit var mediaPlayer: MediaPlayer
     private var _binding: FragmentTimerBinding? = null
     private val binding get() = _binding!!
 
@@ -22,9 +26,13 @@ class TimerFragment : Fragment() {
     //timer settings
     //private var napTimerDuration: Long = viewModel.napTimeTotal.value!! // =>napTimeTotal//nap duration selected
     //private var napTimerDuration: Long = 0L
-    private var napTimer: CountDownTimer? = null
-    private var napProgressBar = 0
-    private var isPlaying: Boolean = false
+    private var napTimer: CountDownTimer? = null //starting time //TODO timeCountDown
+    private var napProgressBar = 0               //progress     //TODO timeProgress
+    private var isRunning: Boolean = true        //timer is running or not //TODO isStart
+
+    private var timeSelected: Long = 0L //TODO napTimeTotal
+    private val timeCountDown: CountDownTimer? = null
+    private val pauseOffSet: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +48,8 @@ class TimerFragment : Fragment() {
         //show and set timer with time and progress bar
         setUpView()
 
+
+
         return view
     }
 
@@ -49,13 +59,6 @@ class TimerFragment : Fragment() {
             //TODO
         }
 
-        viewModel.progress.observe(viewLifecycleOwner){
-            //TODO
-        }
-
-        viewModel.isPlaying.observe(viewLifecycleOwner){
-            //TODO
-        }
 
 
     }
@@ -64,10 +67,10 @@ class TimerFragment : Fragment() {
     private fun setUpView() {
 
         //set selected duration of napping
-        var actualCountDownTime = viewModel.formatCountDownText(viewModel.napTimeTotal.value!!) //formats time from
-        binding.timerShowprogressText.text = actualCountDownTime
+        var actualCountDownTime = formatCountDownText(viewModel.napTimeTotal.value!!) //formats time
+        binding.timerShowprogressText.text = actualCountDownTime                                //show time
 
-        //navigation to Time Picker
+        //navigation to Time Picker to set time
         binding.timerShowprogressText.setOnClickListener {
             findNavController().navigate(R.id.action_timerFragment_to_timePickerFragment)
         }
@@ -79,43 +82,74 @@ class TimerFragment : Fragment() {
 
         //start Timer with start button
         binding.timerPlayFab.setOnClickListener {
-            setProgressBar()
+            if (binding.timerShowprogressText.text == "00:00") {
+                Toast.makeText(requireContext(), "Enter Time Duration", Toast.LENGTH_SHORT).show()
+            } else {
+                startTimer()
+            }
+        }
+
+        //reset the timer
+        binding.timerRestartFab.setOnClickListener{
+            restartTimer()
         }
     }
 
     //------------------------------------------------------
-    fun setProgressBar() {
-        binding.napProgressBar.progress = napProgressBar
+    private fun startTimer() {
+        //binding.napProgressBar.progress = napProgressBar
+        timeSelected = viewModel.napTimeTotal.value!!   //ausgewählte Zeit
+        binding.timerShowprogressText.text = formatCountDownText(timeSelected)
+
         //napTimer = object : CountDownTimer(napTimerDuration * 1000, 1000) {
-        napTimer = object : CountDownTimer(viewModel.napTimeTotal.value!!, 1000) {  //set
+        napTimer = object : CountDownTimer(timeSelected, 1000) {  //set 1) selected time in millisec, 2) Intervall in millisec
             override fun onTick(p0: Long) {
-                var actualCountDownTime = viewModel.formatCountDownText(viewModel.napTimeTotal.value!!)
-                binding.timerShowprogressText.text = actualCountDownTime
-                //viewModel.countDownThePickedTime()
-
+                binding.timerShowprogressText.text = formatCountDownText(p0)
                 napProgressBar++
-                binding.napProgressBar.progress = 100 - napProgressBar
+                binding.timerShowprogressText.text = formatCountDownText(p0)
 
-                //binding.timerShowprogressText.text = (60 - napProgressBar).toString() //60sec
-                //binding.timerShowprogressText.text = "$minutes:$seconds"
+                //binding.napProgressBar.progress = (viewModel.napTimeTotal.value!! - napProgressBar).toInt()
+                binding.napProgressBar.progress = (p0 / 1000).toInt()
+                //binding.napProgressBar.setProgress(100 - p0.toInt())
+
             }
 
             override fun onFinish() {
-                binding.timerShowprogressText.text = "done"
+                binding.timerShowprogressText.text = "Wake Up"
                 // TODO  Alarm start ( and press finish)
+                //if(mediaPlayer != null)
+                startMediaPlayerAlarm()
             }
         }.start()
-        //timer is on
-        isPlaying = true
-        binding.timerRestartFab.setOnClickListener(){
-            viewModel.restartTimer()
-        }
     }
 
+    fun startMediaPlayerAlarm(){
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.minionwecker)
+        mediaPlayer.start()
+    }
+    private fun setTimeFunction(){
+
+    }
+
+    //formatiert ausgewählte Zeit in Minuten und Sekunden
+    fun formatCountDownText(milliseconds: Long):String{
+        val minutes = milliseconds / 1000 / 60
+        val seconds = milliseconds / 1000 % 60
+        //return "$minutes:$seconds"
+        return TIME_FORMAT.format(minutes, seconds)
+    }
+    private fun restartTimer(){
+        //timer stoppen
+        timeCountDown?.cancel()
+        //letzte ausgewählte Zeit anzeigen
+        binding.napProgressBar.progress = napProgressBar
+        timeSelected = viewModel.napTimeTotal.value!!
+    }
 
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

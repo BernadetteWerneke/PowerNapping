@@ -1,5 +1,12 @@
 package com.example.powernapping.ViewModel
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,30 +20,19 @@ class TimerViewModel: ViewModel() {
         get() = _napTimeTotal
 
     //progress of progress bar
-    private val _progress = MutableLiveData<Float>()
-    val progress: LiveData<Float>
-        get() = _progress
+    /*private val _napProgress = MutableLiveData<Float>()
+    val napProgressBar: LiveData<Float>
+        get() = _napProgress*/
 
-    private val _isPlaying = MutableLiveData<Boolean>()
+    //Progress bar is running or not
+    private val _isRunning = MutableLiveData<Boolean>()
     val isPlaying: MutableLiveData<Boolean>
-        get() = _isPlaying
+        get() = _isRunning
 
-    fun set123(duration: Int) {             //workaround
+    fun set123(duration: Int) {             //workaround necessary (reason not explainable)
         _napTimeTotal.value = duration.toLong()
     }
 
-    //formatiert ausgewählte Zeit in Minuten und Sekunden
-    fun formatCountDownText(milliseconds: Long):String{
-        val minutes = milliseconds / 1000 / 60
-        val seconds = milliseconds / 1000 % 60
-        //return "$minutes:$seconds"
-        return TIME_FORMAT.format(minutes, seconds)
-    }
-
-    fun countDownThePickedTime(){}
-
-
-    fun restartTimer(){}
 
 
 

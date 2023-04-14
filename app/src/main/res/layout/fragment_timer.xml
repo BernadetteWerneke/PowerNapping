@@ -22,23 +22,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- time will be showed in this textView -->
+
+    <!-- progress bar while timer runs -->
+
+    <!-- button for navigation to check: i feel (emoji slider) -->
+
+    <!-- restart button for timer -->
+
+    <!-- start button for timer -->
+
     <TextView
         android:id="@+id/timer_showprogress_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:fontFamily="@font/inter_medium"
+        android:paddingLeft="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="30dp"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat"
         android:textColor="@color/pn_aubergine_ori"
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@+id/nap_progress_bar"
-        app:layout_constraintEnd_toEndOf="@+id/nap_progress_bar"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/nap_progress_bar"
         app:layout_constraintTop_toTopOf="@+id/nap_progress_bar"
-        app:layout_constraintVertical_bias="0.492"
+        app:layout_constraintVertical_bias="0.497"
         tools:text="00:00" />
 
-    <!-- progress bar while timer runs -->
     <ProgressBar
         android:id="@+id/nap_progress_bar"
         style="@style/CircularDeterminateProgressBar"
@@ -51,13 +63,7 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
-
-    <!-- button for navigation to check: i feel (emoji slider) -->
-
-    <!-- restart button for timer -->
-
-    <!-- start button for timer -->
+        app:layout_constraintVertical_bias="0.275" />
 
     <Button
         android:id="@+id/timer_check_button"
@@ -70,6 +76,7 @@
         android:fontFamily="@font/inter_medium"
         android:text="@string/check_feel_better"
         android:textColor="@color/pn_aubergine_ori"
+        android:textStyle="bold"
         app:cornerRadius="10dp"
         app:iconTint="@color/pn_gold_ori"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +115,19 @@
         app:layout_constraintStart_toEndOf="@+id/timer_restart_fab"
         app:layout_constraintTop_toTopOf="@+id/timer_restart_fab"
         app:tint="#D6BA96" />
+
+    <Button
+        android:id="@+id/timer_off_btn"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/roundbutton"
+        android:text="OFF"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/nap_progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/nap_progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/nap_progress_bar"
+        app:layout_constraintTop_toTopOf="@+id/nap_progress_bar" />
 
     <!-- writes the word min behind the running time -->
 

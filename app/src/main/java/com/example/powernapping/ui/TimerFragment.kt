@@ -24,15 +24,11 @@ class TimerFragment : Fragment() {
     private val viewModel: TimerViewModel by activityViewModels()
 
     //timer settings
-    //private var napTimerDuration: Long = viewModel.napTimeTotal.value!! // =>napTimeTotal//nap duration selected
-    //private var napTimerDuration: Long = 0L
-    private var napTimer: CountDownTimer? = null //starting time //TODO timeCountDown
-    private var napProgressBar = 0               //progress     //TODO timeProgress
-    private var isRunning: Boolean = true        //timer is running or not //TODO isStart
+    private var napTimer: CountDownTimer? = null //starting time
+    private var napProgressBar = 0               //progress
+    private var alarmIsRunning: Boolean = false
 
-    private var timeSelected: Long = 0L //TODO napTimeTotal
-    private val timeCountDown: CountDownTimer? = null
-    private val pauseOffSet: Long = 0
+    private var timeSelected: Long = 0L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -108,27 +104,37 @@ class TimerFragment : Fragment() {
                 napProgressBar++
                 binding.timerShowprogressText.text = formatCountDownText(p0)
 
-                //binding.napProgressBar.progress = (viewModel.napTimeTotal.value!! - napProgressBar).toInt()
-                binding.napProgressBar.progress = (p0 / 1000).toInt()
+                binding.napProgressBar.progress = (p0 / 1000).toInt()               //TODO
                 //binding.napProgressBar.setProgress(100 - p0.toInt())
 
             }
 
             override fun onFinish() {
-                binding.timerShowprogressText.text = "Wake Up"
-                // TODO  Alarm start ( and press finish)
+                binding.timerShowprogressText.text = "OFF"
                 //if(mediaPlayer != null)
                 startMediaPlayerAlarm()
+                stopMediaPlayer()
             }
         }.start()
     }
 
+    private fun stopMediaPlayer() {
+        binding.timerOffBtn.setOnClickListener(){
+            mediaPlayer.stop()
+            alarmIsRunning = false
+            binding.timerOffBtn.visibility = View.INVISIBLE
+            binding.timerShowprogressText.visibility = View.VISIBLE
+            binding.timerShowprogressText.text = "00:00"
+
+        }
+    }
+
     fun startMediaPlayerAlarm(){
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.minionwecker)
+        alarmIsRunning = true
+        binding.timerOffBtn.visibility = View.VISIBLE
+        binding.timerShowprogressText.visibility = View.INVISIBLE
         mediaPlayer.start()
-    }
-    private fun setTimeFunction(){
-
     }
 
     //formatiert ausgewählte Zeit in Minuten und Sekunden
@@ -140,7 +146,7 @@ class TimerFragment : Fragment() {
     }
     private fun restartTimer(){
         //timer stoppen
-        timeCountDown?.cancel()
+        napTimer?.cancel()
         //letzte ausgewählte Zeit anzeigen
         binding.napProgressBar.progress = napProgressBar
         timeSelected = viewModel.napTimeTotal.value!!

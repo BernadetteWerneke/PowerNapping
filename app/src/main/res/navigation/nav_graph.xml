@@ -15,20 +15,10 @@
             app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/homeFragment3"
         android:name="com.example.powernapping.ui.HomeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_favoriteFragment3"
-            app:destination="@id/favoriteFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_timerFragment3"
-            app:destination="@id/timerFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_dashboardFragment3"
-            app:destination="@id/dashboardFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_home3" />
     <fragment
         android:id="@+id/timerFragment"
         android:name="com.example.powernapping.ui.TimerFragment"
@@ -74,4 +64,19 @@
         android:name="com.example.powernapping.ui.authentication.SignUpFragment"
         android:label="fragment_signup"
         tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.powernapping.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home3">
+        <action
+            android:id="@+id/action_homeFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_timerFragment"
+            app:destination="@id/timerFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
 </navigation>

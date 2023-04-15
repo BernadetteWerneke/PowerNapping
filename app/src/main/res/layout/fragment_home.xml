@@ -5,60 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient"
-    android:paddingTop="50dp"
     tools:context=".ui.HomeFragment">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/category_recycler"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/home_toolbar"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/home_title_tv"
-        tools:listitem="@layout/category_item" />
-
-    <TextView
-        android:id="@+id/home_title_tv"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@color/pn_yellow_light_ori"
-        android:fontFamily="@font/felipa"
-        android:paddingLeft="24dp"
-        android:text="@string/power_nap"
-        android:textColor="@color/pn_aubergine_ori"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/home_settings_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:src="@drawable/ic_settings1"
-        app:layout_constraintBottom_toBottomOf="@+id/home_logout_image"
-        app:layout_constraintEnd_toStartOf="@+id/home_logout_image"
-        app:layout_constraintTop_toTopOf="@+id/home_logout_image"
-        app:layout_constraintVertical_bias="0.461" />
 
     <ImageView
         android:id="@+id/home_logout_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
-        android:paddingEnd="30dp"
+        android:paddingEnd="20dp"
         android:src="@drawable/ic_logout_24"
-        app:layout_constraintBottom_toTopOf="@+id/category_recycler"
+        app:layout_constraintBottom_toBottomOf="@+id/home_toolbar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/home_title_tv" />
+        app:layout_constraintTop_toTopOf="@+id/home_toolbar" />
 
+    <ImageView
+        android:id="@+id/home_settings_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_settings1"
+        app:layout_constraintBottom_toBottomOf="@+id/home_logout_image"
+        app:layout_constraintEnd_toStartOf="@+id/home_logout_image"
+        app:layout_constraintTop_toTopOf="@+id/home_logout_image" />
+
+    <TextView
+        android:id="@+id/home_titel_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/power_nap"
+        android:textColor="@color/pn_aubergine_ori"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/home_toolbar"
+        app:layout_constraintStart_toStartOf="@+id/home_toolbar"
+        app:layout_constraintTop_toTopOf="@+id/home_toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_toolbar"
+        tools:listitem="@layout/category_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>

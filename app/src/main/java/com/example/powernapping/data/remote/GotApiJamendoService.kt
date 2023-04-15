@@ -20,7 +20,9 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface GotApiJamendoService {
-    @GET("?client_id=43119550&format=json&limit=50&order=popularity_total")
+    //@GET("?client_id=43119550&format=json&limit=50&order=popularity_total")
+    @GET("?client_id=43119550&format=json&limit=50&order=popularity_week")
+    //@GET("?client_id=43119550&format=json&limit=50&order=popularity_month")
     suspend fun getAlbum(): GotSong
 }
 

@@ -1,6 +1,5 @@
 package com.example.powernapping.ui.authentication
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,7 +41,7 @@ class LoginFragment : Fragment() {
         //falls User eingeloggt, dann gleich zum Home
         viewModel.currentUser.observe(viewLifecycleOwner){
             if (it != null){
-                findNavController().navigate(R.id.homeFragment)
+                findNavController().navigate(R.id.homeFragment3)
             }
         }
 

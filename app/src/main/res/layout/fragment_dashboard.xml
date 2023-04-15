@@ -10,16 +10,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/dashboard_month_cv"
         android:layout_width="0dp"
-        android:layout_height="210dp"
+        android:layout_height="190dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="75dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dashboard_week_cv">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -41,11 +39,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/dashboard_week_cv"
         android:layout_width="0dp"
-        android:layout_height="210dp"
+        android:layout_height="190dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/dashboard_month_cv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dashboard_baer_cv">
@@ -70,9 +70,9 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/dashboard_baer_cv"
         android:layout_width="0dp"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,10 +97,11 @@
                 android:id="@+id/dashboard_text_baer_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter_medium"
                 android:text="@string/I_feel_good"
                 android:textColor="@color/pn_aubergine_ori"
-                android:textSize="40dp"
+                android:textSize="28sp"
                 app:layout_constraintBottom_toTopOf="@+id/dashboard_baer_iv"
                 app:layout_constraintEnd_toEndOf="@+id/dashboard_baer_iv"
                 app:layout_constraintStart_toStartOf="@+id/dashboard_baer_iv"

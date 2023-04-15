@@ -50,9 +50,10 @@ class TimePickerFragment : Fragment() {
             findNavController().navigate(R.id.action_timePickerFragment_to_timerFragment)
         }
 
-        viewModel.napTimeTotal.observe(viewLifecycleOwner, Observer {
+        //shows selected time in time picker
+        /*viewModel.napTimeTotal.observe(viewLifecycleOwner, Observer {
             binding.timepickerMaxTv.text = it.toString()
-        })
+        })*/
         return view
     }
 

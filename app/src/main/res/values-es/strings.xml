@@ -32,15 +32,13 @@
     <string name="check">Check</string>
     <string name="i_feel">Me siento</string>
 
-    <!-- TODO: Pick Up Timer -->
+    <!-- TODO: Timer Picker-->
     <string name="select_nap_time">Elige power nap time</string>
     <string name="maax_time">(máximo 60 mimutos)</string>
     <string name="min">min</string>
+    <string name="maxMinuten">(máx. 60 minutos)</string>
 
     <!-- TODO: FavoritenFragment -->
     <string name="Best_of_Musik">50 Best of Jamendo Music</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <!-- TODO: Remove or change this placeholder text -->
-    <!-- TODO: Remove or change this placeholder text -->
 </resources>

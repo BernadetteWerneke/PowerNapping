@@ -174,7 +174,63 @@ class Datasource {
                     Song("Out Of The Dark", "Falco",
                         R.drawable.cat_images_37,R.drawable.baseline_favorite_24)
                 )
-            )
+            ),
+            Category("Study",
+                mutableListOf(
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_30, R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.cat_images_31,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.cat_images_28,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_images_24,R.drawable.baseline_favorite_24),
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_23,R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.cat_images_25,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.cat_images_26,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_images_27,R.drawable.baseline_favorite_24),
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_29,R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.cat_images_28,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.cat_images_38,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_images_36, R.drawable.baseline_favorite_24)
+                )
+            ),
+            Category("Featured",
+                mutableListOf(
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_63,R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.cat_images_32,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.cat_images_34,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_images_35,R.drawable.baseline_favorite_24),
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_44,R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.cat_images_45,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.cat_unknown_2,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_unknown_3,R.drawable.baseline_favorite_24),
+                    Song("Never Gonna Give You Up", "Rick Astley",
+                        R.drawable.cat_images_54,R.drawable.baseline_favorite_24),
+                    Song("Take on ME", "a-ha",
+                        R.drawable.category5,R.drawable.baseline_favorite_24),
+                    Song("Africa", "TOTO",
+                        R.drawable.category3,R.drawable.baseline_favorite_24),
+                    Song("Out Of The Dark", "Falco",
+                        R.drawable.cat_images_40,R.drawable.baseline_favorite_24)
+                )
+            ),
         )
     }
 }

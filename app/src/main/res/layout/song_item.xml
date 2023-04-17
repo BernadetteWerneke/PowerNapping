@@ -23,13 +23,21 @@
             android:layout_height="match_parent"
             tools:srcCompat="@drawable/category2" />
 
-        <ImageView
-            android:id="@+id/sonitem_overview_playbutton"
-            android:layout_width="52dp"
-            android:layout_height="49dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            app:srcCompat="@android:drawable/ic_media_play" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/songitem_playbutton_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_play_arrow_orig" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 

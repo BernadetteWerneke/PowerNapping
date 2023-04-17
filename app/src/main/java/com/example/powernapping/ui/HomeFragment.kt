@@ -12,6 +12,7 @@ import com.example.powernapping.ViewModel.MainViewModel
 import com.example.powernapping.adapter.CategoryAdapter
 import com.example.powernapping.data.Datasource
 import com.example.powernapping.databinding.FragmentHomeBinding
+
 /**
  * HomeFragment ist der MainScreen der App
  * sollte kein User eingeloggt sein, wird man automatisch zum Login weitergeleitet

@@ -50,6 +50,7 @@ class TimerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.napTimeTotal.observe(viewLifecycleOwner){
+
             //TODO
         }
     }
@@ -68,7 +69,11 @@ class TimerFragment : Fragment() {
 
         //navigation to check fragment
         binding.timerCheckButton.setOnClickListener {
-            findNavController().navigate(R.id.action_timerFragment_to_checkFragment)
+            if(alarmIsRunning){
+                Toast.makeText(requireContext(), "Check during nap not possible", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().navigate(R.id.action_timerFragment_to_checkFragment)
+            }
         }
 
         //start Timer with start button
@@ -76,22 +81,29 @@ class TimerFragment : Fragment() {
             if (binding.timerShowprogressText.text == "00:00") {
                 Toast.makeText(requireContext(), "Enter Time Duration", Toast.LENGTH_SHORT).show()
             } else {
-                startTimer()
+                if (!alarmIsRunning) {
+                    startTimer()
+                }
             }
         }
 
         //reset the timer
         binding.timerRestartFab.setOnClickListener{
+            if(alarmIsRunning){
+                napTimer?.cancel()
+            }
             restartTimer()
         }
     }
 
     //------------------------------------------------------
     private fun startTimer() {
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.minionwecker)
         //binding.napProgressBar.progress = napProgressBar
         timeSelected = viewModel.napTimeTotal.value!!                           //ausgewählte Zeit
         binding.timerShowprogressText.text = formatCountDownText(timeSelected)  //show time
         binding.napProgressBar.max  = (timeSelected / 1000).toInt()             //max. length of progressbar
+        alarmIsRunning = true
 
         //napTimer = object : CountDownTimer(napTimerDuration * 1000, 1000) {
         napTimer = object : CountDownTimer(timeSelected, 1000) {  //set 1) selected time in millisec, 2) Intervall in millisec
@@ -107,6 +119,7 @@ class TimerFragment : Fragment() {
                 //if(mediaPlayer != null)
                 startMediaPlayerAlarm()
                 stopMediaPlayer()
+                alarmIsRunning = false
             }
         }.start()
     }
@@ -123,7 +136,6 @@ class TimerFragment : Fragment() {
     }
 
     fun startMediaPlayerAlarm(){
-        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.minionwecker)
         alarmIsRunning = true
         binding.timerOffBtn.visibility = View.VISIBLE
         binding.timerShowprogressText.visibility = View.INVISIBLE
@@ -139,9 +151,10 @@ class TimerFragment : Fragment() {
     private fun restartTimer(){
         //timer stoppen
         napTimer?.cancel()
-        //letzte ausgewählte Zeit anzeigen
-        binding.napProgressBar.progress = napProgressBar
-        timeSelected = viewModel.napTimeTotal.value!!
+        binding.napProgressBar.progress = timeSelected.toInt()
+        setUpView()
+        alarmIsRunning = false
+
     }
 
     override fun onDestroyView() {

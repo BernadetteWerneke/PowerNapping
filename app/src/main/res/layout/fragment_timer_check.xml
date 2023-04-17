@@ -31,10 +31,12 @@
                 android:layout_marginBottom="40dp"
                 android:fontFamily="@font/inter_medium"
                 android:text="@string/i_feel"
+                android:textAlignment="center"
                 android:textColor="@color/pn_aubergine_ori"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@+id/check_emoji_iv"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.464"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <SeekBar

@@ -16,7 +16,7 @@ import com.example.powernapping.databinding.FragmentTimePickerBinding
 class TimePickerFragment : Fragment() {
 
     // selected time
-    var duration = 0
+    var duration = 1
 
     private var _binding : FragmentTimePickerBinding? = null
     private val binding get() = _binding!!
@@ -35,8 +35,8 @@ class TimePickerFragment : Fragment() {
         val view = binding.root
 
         //setting min and max values
-        binding.numPicker.maxValue = 59
-        binding.numPicker.minValue = 0
+        binding.numPicker.maxValue = 60
+        binding.numPicker.minValue = 1
 
         //time picker with spinner mode
         binding.numPicker.setOnValueChangedListener{

@@ -64,8 +64,13 @@ class TimerFragment : Fragment() {
 
         //navigation to Time Picker to set time
         binding.timerShowprogressText.setOnClickListener {
-            findNavController().navigate(R.id.action_timerFragment_to_timePickerFragment)
+            if (alarmIsRunning){
+                Toast.makeText(requireContext(), "First stop running than change time", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().navigate(R.id.action_timerFragment_to_timePickerFragment)
+            }
         }
+
 
         //navigation to check fragment
         binding.timerCheckButton.setOnClickListener {

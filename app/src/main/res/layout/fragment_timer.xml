@@ -118,10 +118,11 @@
         app:layout_constraintTop_toTopOf="@+id/timer_restart_fab"
         app:tint="#D6BA96" />
 
+
     <Button
         android:id="@+id/timer_off_btn"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
         android:background="@drawable/roundbutton"
         android:text="OFF"
         android:textSize="50sp"
@@ -130,7 +131,5 @@
         app:layout_constraintEnd_toEndOf="@+id/nap_progress_bar"
         app:layout_constraintStart_toStartOf="@+id/nap_progress_bar"
         app:layout_constraintTop_toTopOf="@+id/nap_progress_bar" />
-
-    <!-- writes the word min behind the running time -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

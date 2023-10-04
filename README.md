@@ -37,3 +37,8 @@ Herausforderung lag in der zeitlichen Umsetzung des von mir gewünschten Umfangs
 -**online/offline Funktionalität**
 -**Einstellungen**
 
+![Bildschirmfoto 2023-10-04 um 20 41 50](https://github.com/BernadetteWerneke/PowerNapping/assets/120725476/2dce77ce-5755-4c52-af69-47276d63d325)
+![Bildschirmfoto 2023-10-04 um 20 42 49](https://github.com/BernadetteWerneke/PowerNapping/assets/120725476/9677fe8f-ca80-4e26-b98f-a0784d72b29e)
+![Bildschirmfoto 2023-10-04 um 20 42 59](https://github.com/BernadetteWerneke/PowerNapping/assets/120725476/cb32df35-e8e2-4ea9-8dbc-fa7607ea19b4)
+![Bildschirmfoto 2023-10-04 um 20 43 19](https://github.com/BernadetteWerneke/PowerNapping/assets/120725476/45106d7d-efc3-4e28-b9ee-8c14baf6a51f)
+

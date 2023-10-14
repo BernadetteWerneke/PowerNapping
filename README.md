@@ -15,14 +15,14 @@ Zudem werden die Top 50 Best of Jamendo eingelesen.
 -**Retrofit (API)**
 -**Coil**
 -**Kotlin Coroutines**
-_**Recycler Views**
+-**Recycler Views**
 -**Firebase Authentication**
 -**MediaPlayer**
 -**Overlays**
 -**Timer**
 -**Tab Bar Controller**
 -**Übersetzung in 3 Sprachen (de, es, en)**
--**User Fonts importiert**
+-**User Fonts**
 -**Error Handling**
 
 ## Herangehensweise

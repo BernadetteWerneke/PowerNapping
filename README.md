@@ -1,4 +1,8 @@
 # PowerNapping macht fit
+
+meine App auf einem Blick
+[Android.App.pdf](https://github.com/BernadetteWerneke/PowerNapping/files/14617497/Android.App.pdf)
+
 In einem kurzen Schlaf tagsüber auftanken und sich energiegeladener fühlen. 
 Die App bietet die Möglichkeit über einen Timer seine gewünschte Zeit für ein Nickerchen einzustellen. Durch einen Weckruf wird man aus dem Schlaf geholt. Ein anschließender Check zeigt seine eigenen Fortschritte der Erholung an.
 Zudem werden die Top 50 Best of Jamendo eingelesen.
